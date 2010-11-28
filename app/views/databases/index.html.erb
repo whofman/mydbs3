@@ -1,0 +1,23 @@
+<h2>Overzicht databases</h2>
+
+<table class='sortable' border='1'>
+  <tr bgcolor='green' >
+    <th width='300' align='left'>Naam</th>
+    <th width='350' align='left'>Beschrijving</th>
+    <th>Driver</th>
+    <th>Tabel</th>
+  </tr>
+
+<% @databases.each do |database| %>
+  <tr class="<%= cycle("even", "odd") %>">
+    <td><%= link_to database.naam, database %>
+    <td><%= database.beschrijving %></td>
+    <td><%= database.driver %></td>
+    <td align='right'><%= database.tabel %></td>
+  </tr>
+<% end %> 
+</table>
+
+<br />
+
+<%= link_to 'Database toevoegen', new_database_path %>

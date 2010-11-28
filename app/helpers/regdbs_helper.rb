@@ -1,0 +1,2 @@
+module RegdbsHelper
+end

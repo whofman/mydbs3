@@ -1,0 +1,37 @@
+<%= form_for(@artdb) do |f| %>
+  <% if @artdb.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@artdb.errors.count, "error") %> prohibited this artdb from being saved:</h2>
+
+      <ul>
+      <% @artdb.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titel %><br />
+    <%= f.text_field :titel %>
+  </div>
+  <div class="field">
+    <%= f.label :soort %><br />
+    <%= f.text_field :soort %>
+  </div>
+  <div class="field">
+    <%= f.label :tijdschrift %><br />
+    <%= f.text_field :tijdschrift %>
+  </div>
+  <div class="field">
+    <%= f.label :jaargang %><br />
+    <%= f.text_field :jaargang %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

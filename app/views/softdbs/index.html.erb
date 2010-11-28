@@ -1,0 +1,43 @@
+<h2>Software Overzicht</h2>
+
+<%= form_for @search do |f| %>
+  <p>
+    <%= f.label :fname_contains, "Bestand:" %>
+    <%= f.text_field :fname_contains, :size => 20 %>
+    <%= f.label :fcat_contains, "Soort:" %>
+    <%= f.text_field :fcat_contains, :size => 8 %>
+    <%= f.label :fvol_contains, "Volume:" %>
+    <%= f.text_field :fvol_contains, :size => 8 %>
+
+    <%= f.submit "Zoek", :name => nil %>
+  </p>
+<% end %>
+
+<table class='sortable' border='1'>
+  <tr bgcolor='green'>
+    <th width='250'>Bestand</th>
+    <th align='right'>Grootte</th>
+    <th>Datum</th>
+    <th>Volume</th>
+    <th>Soort</th>
+    <th align='left' width='400'>Beschrijving</th>
+  </tr>
+
+<% @softdbs.each do |softdb| %>
+  <tr class="<%= cycle("even", "odd") %>">
+    <td><%= link_to softdb.fname, softdb %></td>
+    <td align='right'><%=h softdb.fsize %></td>
+    <td><%=h softdb.fdate %></td>
+    <td><%=h softdb.fvol %></td>
+    <td><%=h softdb.fcat %></td>
+    <td><%=h softdb.fdesc %></td>
+
+<% end %>
+</table>
+
+<p>  
+  <%= link_to 'Software toevoegen', new_softdb_path %>       
+</p>    
+
+  <%= will_paginate @softdbs %>  
+<br />

@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  Naam: MyString
+  Voornaam: MyString
+  Adres: MyString
+  Woonplaats: MyString
+  Telefoon: MyString
+  Email: MyString
+  Website: MyString
+  Verjaardag: MyString
+  Notities: MyString
+
+two:
+  Naam: MyString
+  Voornaam: MyString
+  Adres: MyString
+  Woonplaats: MyString
+  Telefoon: MyString
+  Email: MyString
+  Website: MyString
+  Verjaardag: MyString
+  Notities: MyString

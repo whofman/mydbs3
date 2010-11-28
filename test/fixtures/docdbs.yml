@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  fname: MyString
+  fsize: MyString
+  fdate: MyString
+  fvol: MyString
+  fhide: MyString
+  fcat: MyString
+  fdesc: MyString
+
+two:
+  fname: MyString
+  fsize: MyString
+  fdate: MyString
+  fvol: MyString
+  fhide: MyString
+  fcat: MyString
+  fdesc: MyString

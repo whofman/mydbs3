@@ -1,0 +1,38 @@
+<h2>Registratie informatie</h2>
+<p
+<table width="50%">
+  <tr>
+     <td><b>Product:</b></td>
+     <td><%=h @regdb.product %></td>
+  </tr>
+
+  <tr>
+     <td><b>Verloopt:</b></td>
+     <td><%=h @regdb.expires %></td>
+  </tr>
+
+  <tr>
+     <td><b>Url:</b></td>
+     <td><%=h @regdb.url %></td>
+  </tr>
+
+  <tr>
+     <td><b>Login:</b></td>
+     <td><%=h @regdb.login %></td>
+  </tr>
+
+  <tr>
+     <td><b>Wachtwoord:</b></td>
+     <td><%=h @regdb.passwd %></td>
+  </tr>
+
+	<tr>
+     <td><b>Notities:</b></td>
+     <td><%=h @regdb.notes %></td>
+  </tr>
+</table>
+
+<p>
+<%= link_to 'Wijzig', edit_regdb_path(@regdb) %> |
+<%= link_to "Verwijder", @regdb, :confirm => 'Zeker weten?', :method => :delete %> |
+<%= link_to 'Terug', regdbs_path %>

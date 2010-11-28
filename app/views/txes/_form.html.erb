@@ -1,0 +1,53 @@
+<%= form_for(@tx) do |f| %>
+  <% if @tx.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tx.errors.count, "error") %> prohibited this tx from being saved:</h2>
+
+      <ul>
+      <% @tx.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Datum %><br />
+    <%= f.text_field :Datum %>
+  </div>
+  <div class="field">
+    <%= f.label :Rekening %><br />
+    <%= f.text_field :Rekening %>
+  </div>
+  <div class="field">
+    <%= f.label :Naam %><br />
+    <%= f.text_field :Naam %>
+  </div>
+  <div class="field">
+    <%= f.label :TegenRek %><br />
+    <%= f.text_field :TegenRek %>
+  </div>
+  <div class="field">
+    <%= f.label :TX %><br />
+    <%= f.text_field :TX %>
+  </div>
+  <div class="field">
+    <%= f.label :Bedrag %><br />
+    <%= f.text_field :Bedrag %>
+  </div>
+  <div class="field">
+    <%= f.label :Code %><br />
+    <%= f.text_field :Code %>
+  </div>
+  <div class="field">
+    <%= f.label :Soort %><br />
+    <%= f.text_field :Soort %>
+  </div>
+  <div class="field">
+    <%= f.label :Mededeling %><br />
+    <%= f.text_field :Mededeling %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

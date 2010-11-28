@@ -1,0 +1,21 @@
+<%= simple_form_for(@relatie) do |f| %>
+  <% if @relatie.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@relatie.errors.count, "error") %> prohibited this relatie from being saved:</h2>
+
+      <ul>
+      <% @relatie.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="inputs">
+    <%= f.input :naam %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

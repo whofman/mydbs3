@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @database.naam %>
+</p>
+
+<p>
+  <b>Beschrijving:</b>
+  <%= @database.beschrijving %>
+</p>
+
+<p>
+  <b>Driver:</b>
+  <%= @database.driver %>
+</p>
+
+<p>
+  <b>Tabel:</b>
+  <%= @database.tabel %>
+</p>
+
+<%= link_to 'Wijzig', edit_database_path(@database) %> |
+<%= link_to "Verwijder", @database, :confirm => 'Zeker weten?', :method => :delete %> |
+<%= link_to 'Terug', databases_path %>

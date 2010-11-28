@@ -1,0 +1,56 @@
+<%= form_for(@adresdb) do |f| %>
+
+  <% if @adresdb.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@adresdb.errors.count, "error") %> prohibited this account from being saved:</h2>
+
+      <ul>
+      <% @adresdb.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<table width="50%">
+  <tr>
+    <td><%= f.label :Naam %><br />
+        <%= f.text_field :Naam %></td>
+    <td><%= f.label :Voornaam %><br />
+        <%= f.text_field :Voornaam %></td>
+    <td><%= f.label :Verjaardag %><br />
+        <%= f.text_field :Verjaardag %></td>
+  </tr>
+  
+  <tr>
+    <td><%= f.label :Adres %><br />
+        <%= f.text_field :Adres %></td>
+    <td><%= f.label :Postcode %><br />
+        <%= f.text_field :Postcode %></td>
+    <td><%= f.label :Woonplaats %><br />
+        <%= f.text_field :Woonplaats %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :Telefoon %><br />
+        <%= f.text_field :Telefoon %></td>
+    <td><%= f.label :Email %><br />
+        <%= f.text_field :Email %></td>
+    <td><%= f.label :Website %><br />
+        <%= f.text_field :Website %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :relatie_id %><br />
+        <%= f.collection_select :relatie_id, Relatie.all, :id, :naam  %></td>
+  <tr>
+</table>
+
+<p>
+  <%= f.label :Notities %><br />
+  <%= f.text_area :Notities, :rows => 5, :cols => 50 %>
+</p>
+
+<p>
+    <%= f.submit 'Opslaan' %>
+</p>
+
+<% end %>

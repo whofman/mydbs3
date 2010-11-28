@@ -1,0 +1,50 @@
+<h2>Toon transaktie</h2>
+
+<p>
+  <b>Datun:</b>
+  <%= @tx.Datun %>
+</p>
+
+<p>
+  <b>Rekening:</b>
+  <%= @tx.Rekening %>
+</p>
+
+<p>
+  <b>Naam:</b>
+  <%= @tx.Naam %>
+</p>
+
+<p>
+  <b>Tegenrek:</b>
+  <%= @tx.TegenRek %>
+</p>
+
+<p>
+  <b>Tx:</b>
+  <%= @tx.TX %>
+</p>
+
+<p>
+  <b>Bedrag:</b>
+  <%= @tx.Bedrag %>
+</p>
+
+<p>
+  <b>Code:</b>
+  <%= @tx.Code %>
+</p>
+
+<p>
+  <b>Soort:</b>
+  <%= @tx.Soort %>
+</p>
+
+<p>
+  <b>Mededeling:</b>
+  <%= @tx.Mededeling %>
+</p>
+
+
+<%= link_to 'Edit', edit_tx_path(@tx) %> |
+<%= link_to 'Back', txes_path %>

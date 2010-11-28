@@ -1,0 +1,48 @@
+<%= form_for(@regdb) do |f| %>
+  <% if @regdb.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@regdb.errors.count, "error") %> prohibited this account from being saved:</h2>
+
+      <ul>
+      <% @regdb.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<table>
+  <tr>
+     <td><%= f.label :product %><br />
+         <%= f.text_field :product %></td>
+     <td>
+        <%= f.label :expires %><br />
+        <%= f.text_field :expires, :size => 10 %>
+     </td>
+  <tr>
+  <td>
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </td> 
+  <tr></tr>
+  <tr>
+	<td><%= f.label :login %><br />
+        <%= f.text_field :login, :size => 10 %>
+    </td>
+    <td>
+       <%= f.label :passwd %><br />
+       <%= f.text_field :passwd, :size => 5 %>
+    </td>
+  </tr>
+  <tr>
+    <td><%= f.label :notes %><br />
+        <%= f.text_area :notes %>
+    </td>
+  </tr>
+</table>
+
+<p>
+    <%= f.submit 'Toevoegen' %>
+</p>
+<% end %>

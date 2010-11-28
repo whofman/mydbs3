@@ -1,0 +1,42 @@
+<h2>Adres Lijst</h2> 
+
+<%= form_for @search do |f| %>
+  <p>
+    <%= f.label :Naam_contains, "Naam:" %>
+    <%= f.text_field :Naam_contains, :size => 20 %>
+    <%= f.label :relatie_id, "Relatie:" %>
+    <%= f.collection_select :relatie_id_equals, Relatie.all, :id, :naam, :include_blank => true  %>
+ 
+    <%= f.submit "Zoek", :name => nil %>
+  </p>
+<% end %>
+
+
+<table class='sortable' border='1'>
+  <tr bgcolor='green'>
+    <th width="200">Naam</th>
+    <th width="200">Adres</th>
+    <th>Woonplaats</th>
+    <th>Telefoon</th>
+    <th>Relatie</th>
+  </tr>       
+
+<% @adresdbs.each do |adresdb| %>
+  <tr class="<%= cycle("even", "odd") %>">
+    <td><%= link_to adresdb.Naam, adresdb %> <%=h adresdb.Voornaam %></td>
+    <td><%=h adresdb.Adres %></td>
+    <td><%=h adresdb.Postcode %><%=h adresdb.Woonplaats %></td>
+    <td><%=h adresdb.Telefoon %></td>
+    <td><%=h adresdb.relatie.naam %></td>
+  </tr>
+<% end %>  
+
+
+</table>
+<br />
+<%= link_to 'Adres toevoegen', new_adresdb_path %>   
+<br />  
+<p>
+<%= will_paginate @adresdbs %>
+</p>                             
+<br />

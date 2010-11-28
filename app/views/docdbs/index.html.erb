@@ -1,0 +1,43 @@
+<h2>Documenten Overzicht</h2>
+
+<% form_for @search do |f| %>
+  <p>
+    <%= f.label :fname_contains, "Document:" %>
+    <%= f.text_field :fname_contains, :size => 20 %>
+    <%= f.label :fdate_contains, "Datum:" %>
+    <%= f.text_field :fdate_contains, :size => 8 %>
+    <%= f.label :fcat_contains, "Type:" %>
+    <%= f.text_field :fcat_contains, :size => 5 %>
+ 
+    <%= f.submit "Zoek", :name => nil %>
+  </p>
+<% end %>
+
+<table class='sortable' border='1'>
+  <tr bgcolor='green'>  
+    <th>Document</th>
+    <th>Grootte</th>
+    <th>Datum</th>
+    <th>Volume</th>
+    <th>Soort</th>
+    <th width="400">Omschrijving</th>
+  </tr>
+
+<% @docdbs.each do |docdb| %>
+  <tr class="<%= cycle("even", "odd") %>">
+    <td><%= link_to docdb.fname, docdb %></td>
+    <td aligh='right'><%=h docdb.fsize %></td>
+    <td><%=h docdb.fdate %></td>
+    <td><%=h docdb.fvol %></td>
+    <td><%=h docdb.fcat %></td>
+    <td><%=h docdb.fdesc %></td>
+  </tr>
+<% end %>
+</table>  
+
+<br /> 
+<%= link_to 'Document toevoegen', new_docdb_path %>  
+<p>
+<%= will_paginate %> 
+</p>
+<br />

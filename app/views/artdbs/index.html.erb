@@ -1,0 +1,40 @@
+<h2>Artikel Overzicht</h2>
+
+<%= form_for @search do |f| %>
+  <p>
+    <%= f.label :titel_contains, "Titel:" %>
+    <%= f.text_field :titel_contains, :size => 10 %>
+    <%= f.label :soort_contains, "Soort:" %>
+    <%= f.text_field :soort_contains, :size => 5 %>
+    <%= f.label :tijdschrift_contains, "Tijdschrift:" %>
+    <%= f.text_field :tijdschrift_contains, :size => 8 %>
+    <%= f.label :jaargang_contains, "Jaargang:" %>
+    <%= f.text_field :jaargang_contains, :size => 5 %>
+
+    <%= f.submit "Zoek", :name => nil %>
+  </p>
+<% end %>
+
+<table class='sortable' border='1'>
+  <tr bgcolor='green' >
+    <th width="400">Titel</th>
+    <th>Soort</th>
+    <th>Tijdschrift</th>
+    <th>Jaargang</th>
+  </tr>
+
+<% @artdbs.each do |artdb| %>
+  <tr class="<%= cycle("even", "odd") %>">
+    <td><%= link_to artdb.titel, artdb %></td>
+    <td><%= artdb.soort %></td>
+    <td><%= link_to artdb.tijdschrift, artdb.url %></td>
+    <td><%= artdb.jaargang %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Artikel toevoegen', new_artdb_path %>
+
+<p><%= will_paginate @artdbs %></p>

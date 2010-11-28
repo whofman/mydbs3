@@ -1,0 +1,33 @@
+<h2>Transaktie Overzicht</h2> 
+
+<table id="tx" class="sortable" border='1'>
+  <tr bgcolor='green'>
+    <th width="8%">Datum</th>
+    <th width="8%">Rekening</th>
+    <th width="23%">Naam</th>
+    <th width="8%">Tegenrek</th>
+    <th>Tx</th>
+    <th>Bedrag</th>
+    <th width="1%">Code</th>
+    <th>Soort</th>
+    <th>Mededeling</th>
+  </tr>
+
+<% @txes.each do |tx| %>
+  <tr class="<%= cycle("even", "odd") %>">
+    <td><%=h tx.Datum %></td>
+    <td align="right"><%=h tx.Rekening %></td>
+    <td><%=h tx.Naam %></td>
+    <td align="right"><%=h tx.TegenRek %></td>
+    <td align=right><%=h tx.TX %></td>
+    <td align="right"><%=h tx.Bedrag %></td>
+    <td><%=h tx.Code %></td>
+    <td><%=h tx.Soort %></td>
+    <td><%=h tx.Mededeling %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%= will_paginate @txes %>
+<br />

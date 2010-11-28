@@ -1,0 +1,23 @@
+<h2>Account Overzicht</h2>
+
+<table border='1' >
+  <tr bgcolor='green'>
+    <th>Bank</th>
+    <th>Bijgewerkt</th>
+    <th>Saldo</th> 
+  </tr>
+
+<% @accounts.each do |account| %>
+  <tr class="<%= cycle("even", "odd") %>">
+    <td align="right"><%=h account.Bank %></td>
+    <td><%= account.Bijgewerkt %></td>
+    <td><%= account.Saldo %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nieuw account', new_account_path %> 
+
+

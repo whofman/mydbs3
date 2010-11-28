@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mydbs3</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag 'sorttable' %>
+  <%= javascript_include_tag 'geturl' %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+   <div id="header">
+   <%= render :partial => 'partials/header' %>
+   </div>
+   <div id="main">
+      <div id="menu">
+         <%= render :partial => 'partials/menu' %>
+      </div>
+      <div id="content">
+         <% if flash[:notice] -%>
+         <p class="error"><%= flash[:notice] %></p>
+         <% end -%>
+         <%= yield :layout %>
+      </div>
+   </div>
+   <div id="footer">
+      <%= render :partial => 'partials/footer' %>
+   </div>
+
+
+</body>
+</html>

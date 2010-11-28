@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  beschrijving: MyString
+  driver: MyString
+  tabel: 1
+
+two:
+  name: MyString
+  beschrijving: MyString
+  driver: MyString
+  tabel: 1

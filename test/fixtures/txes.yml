@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  Datun: MyString
+  Rekening: MyString
+  Naam: MyString
+  TegenRek: MyString
+  TX: MyString
+  Bedrag: MyString
+  Code: MyString
+  Soort: MyString
+  Mededeling: MyString
+
+two:
+  Datun: MyString
+  Rekening: MyString
+  Naam: MyString
+  TegenRek: MyString
+  TX: MyString
+  Bedrag: MyString
+  Code: MyString
+  Soort: MyString
+  Mededeling: MyString

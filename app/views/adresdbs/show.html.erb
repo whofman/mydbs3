@@ -1,0 +1,58 @@
+<h2>Adres kaart</h2>
+
+<table width="50%">
+  <tr>
+    <td><b>Naam:</b></td>
+    <td><%=h @adresdb.Naam %></td>
+  </tr>
+
+  <tr>
+    <td><b>Voornaam:</b></td>
+    <td><%=h @adresdb.Voornaam %></td>
+  </tr>
+
+  <tr>
+     <td><b>Adres:</b></td>
+     <td><%=h @adresdb.Adres %></td>
+  </tr>
+
+  <tr>
+     <td><b>Woonplaats:</b></td>
+     <td><%=h @adresdb.Woonplaats %></td>
+  </tr>
+
+  <tr>
+     <td><b>Telefoon:</b></td>
+     <td><%=h @adresdb.Telefoon %></td>
+  </tr> 
+
+  <tr>
+     <td><b>Relatie:</b></td>
+     <td><%=h @adresdb.relatie.naam %></td>
+  </tr> 
+
+  <tr>
+     <td><b>Email:</b></td>
+     <td><%=h @adresdb.Email %></td>
+  </tr>
+
+  <tr>
+     <td><b>Website:</b></td>
+     <td><%=h @adresdb.Website %></td>
+  </tr>
+
+  <tr>
+     <td><b>Verjaardag:</b></td>
+     <td><%=h @adresdb.Verjaardag %></td>
+  </tr>
+
+  <tr>
+     <td><b>Notities:</b></td>
+     <td><%=h @adresdb.Notities %></td>
+  </tr>
+</table>
+
+<p>
+
+<%= link_to 'Wijzig', edit_adresdb_path(@adresdb) %></td> |
+<%= link_to 'Terug', adresdbs_path %></td>

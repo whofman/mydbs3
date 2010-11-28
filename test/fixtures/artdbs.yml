@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  titel: MyString
+  soort: MyString
+  tijdschrift: MyString
+  jaargang: MyString
+  url: MyString
+
+two:
+  titel: MyString
+  soort: MyString
+  tijdschrift: MyString
+  jaargang: MyString
+  url: MyString

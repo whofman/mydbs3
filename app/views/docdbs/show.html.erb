@@ -1,0 +1,44 @@
+<h2>Document gegevens </h2>
+
+<table width="50%">
+  <tr>
+    <td><b>Document:</b></td>
+    <td><%=h @docdb.fname %></td>
+  </tr>
+  
+  <tr>
+    <td><b>Grootte:</b></td>
+    <td><%=h @docdb.fsize %></td>
+  </tr>
+
+  <tr>
+    <td><b>Datum:</b></td>
+    <td><%=h @docdb.fdate %></td>
+  </tr>
+
+  <tr>
+    <td><b>Volume:</b></td>
+    <td><%=h @docdb.fvol %></td>
+  </tr>
+
+  <tr>
+    <td><b>Hidden:</b></td>
+    <td><%=h @docdb.fhide %></td>
+  </tr>
+
+  <tr>
+    <td><b>Type:</b></td>
+    <td><%=h @docdb.fcat %></td>
+  </tr>
+
+  <tr>
+    <td><b>Omschrijving:</b></td>
+    <td><%=h @docdb.fdesc %></td>
+  </tr>
+
+</table>
+
+<p>
+
+<%= link_to 'Terub', docdbs_path %></td> 
+</p>

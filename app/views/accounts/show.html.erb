@@ -1,0 +1,22 @@
+<h2>Account gegevens</h2>
+
+<p>
+  <b>Bank:</b>
+  <%= @account.Bank %>
+</p>
+
+<p>
+  <b>Bijgewerkt:</b>
+  <%= @account.Bijgewerkt %>
+</p>
+
+<p>
+  <b>Saldo:</b>
+  <%= @account.Saldo %>
+</p>
+
+<br />
+<%= link_to 'Wijzig', edit_account_path(@account) %> |
+<%= link_to 'Verwijder', @account, :confirm => 'Zeker weten?', :method => :delete %> |
+<%= link_to 'Terug', accounts_path %>
+<br />

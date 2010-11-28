@@ -1,0 +1,2 @@
+module DocdbsHelper
+end

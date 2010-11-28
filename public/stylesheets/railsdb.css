@@ -1,0 +1,262 @@
+body
+{
+  background-color:     #F2F2F2;
+}
+
+body, form
+{
+  margin:               0;
+  padding:              0;
+}
+
+body, td, p, h1, h2, h3, a
+{
+  font-size:            12px;
+  font-family:          sans-serif;
+  color:                #000;
+}
+
+h1
+{
+  font-size:            25px;
+  padding:              0;
+  margin:               40px 0 0 0;
+}
+
+h2
+{
+  padding:              8px 0 0 10px;
+  margin:               0 0 0 0;
+}
+
+a
+{
+  color:                #333;
+  background-color:     inherit;
+}
+
+a:hover
+{
+  color:                #000;
+  background-color:     inherit;
+}
+
+.data td.c, .form td.c
+{
+  text-align:           center;
+}
+
+.data td.r, .form td.r
+{
+  text-align:           right;
+}
+
+.alt
+{
+  color:                inherit;
+  background-color:     #eee;
+}
+
+.alt2
+{
+  color:                inherit;
+  background-color:     #ddd;
+}
+
+.selected
+{
+  color:                #000;
+  background-color:     #eee;
+  font-weight:          bold;
+  padding:              2px 1px 1px 1px;
+}
+
+.error
+{
+  color:                #f00;
+  background-color:     inherit;
+}
+
+p.error
+{
+    margin:              0 0 0 0;
+    padding:             10px 0 0 10px;
+}
+
+table.data, table.form
+{
+  margin:               10px;
+  border-collapse:      collapse;
+}
+
+table.data td, table.form td
+{
+  border:               1px solid #000;
+  padding:              5px;
+}
+
+table.data thead td, table.form thead td, table.data tfoot td, table.form tfoot td
+{
+  color:                #eee;
+  background-color:     #454545;
+}
+
+table.form thead tr.label td
+{
+  color:                #eee;
+  background-color:     #000;
+  font-size:            11px;
+  text-align:           center;
+  padding:              2px;
+}
+
+table.form tfoot td, table.form td.label, table.data td.add
+{
+  text-align:           right;
+}
+
+table.form tfoot td table
+{
+  float:                right;
+}
+
+table.form tfoot input
+{
+  font-size:            11px;
+  color:                #333;
+  background-color:     #c0c0c0;
+}
+
+table.data thead a
+{
+  color:                #ddd;
+  background-color:     inherit;
+}
+
+table.data thead a:hover
+{
+  color:                #fff;
+  background-color:     inherit;
+}
+
+#header
+{
+  background-color:     #ccc;
+}
+
+#header table
+{
+  margin:               0 0 0 0;
+  width:                100%;
+  border-collapse:      collapse;
+  border-bottom:        1px solid #000;
+}
+
+#header .l, #header .a
+{
+  text-align:           right;
+  padding:              5px 5px 1px 0;
+}
+
+#header .a
+{
+  font-size:            17px;
+}
+
+#header .l
+{
+  vertical-align:       bottom;
+  padding:              12px 5px 3px 0;
+}
+
+#header .t
+{
+  font-size:            25px;
+  font-weight:          bold;
+  vertical-align:       bottom;
+  padding:              0 0 5px 8px;
+}
+
+#main
+{
+  height:               720px; 
+  background:           url(/images/main_bg.gif) repeat-y;
+}
+
+#footer table
+{
+  border-top:           1px solid #000;
+  width:                150%;
+}
+
+#footer table td
+{
+  font-size:            11px;
+  text-align:           left;
+  padding:              2px 4px 0 0;
+  vertical-align:       top;
+  height:               8px;
+}
+
+#menu
+{
+  float:                left;
+  border-collapse:      collapse;
+  margin:               0 0 0 0;  
+  background-color:	green; 
+  height:               720px;
+}
+
+#menu table
+{
+  margin:               4px 0 0 0;
+}
+
+#menu table td
+{
+  width:                132px;
+  text-align:           right;
+  padding:              0 6px 2px 0;
+}
+
+#menu a
+{
+  font-size:            15px;
+  color:                #333;
+  background-color:     inherit;
+}
+
+#menu a:hover
+{
+  color:                #000;
+  background-color:     inherit;
+}
+
+#content
+{
+  margin:               0 0 0 144px;
+}
+
+table.tight
+{
+  border-collapse:    collapse;
+}
+
+table.tight td
+{
+  border:             0;
+  padding:            0;
+}
+
+table.tight td.cancel
+{
+  padding:            0 5px 0 0;
+}
+
+tr.even td{
+	background-color:#ffcc99;
+}
+
+tr.odd td{
+	background-color:#ffffcc;
+}

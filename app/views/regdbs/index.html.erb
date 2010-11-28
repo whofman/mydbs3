@@ -1,0 +1,26 @@
+<h2>Registraties</h2>
+
+<table class='sortable' border='1'>
+  <tr bgcolor='green'>
+    <th width="150">Product</th>
+    <th>Verloopt</th>
+    <th width='250'>Url</th>
+    <th width='150'>Login</th>
+    <th>Wachtwoord</th> 
+  </tr>
+
+<% @regdbs.each do |regdb| %>
+<tr class="<%= cycle("even", "odd") %>">
+    <td><%= link_to regdb.product, regdb %></td>
+    <td><%=h regdb.expires %></td>
+    <td><%=h regdb.url %></td>
+    <td><%=h regdb.login %></td>
+    <td><%=h regdb.passwd %></td> 
+  </tr>
+<% end %>
+</table>   
+
+<p><%= will_paginate @regdbs %></p>
+<br />
+
+<%= link_to 'Registratie toevoegen', new_regdb_path %>

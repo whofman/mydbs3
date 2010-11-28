@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  product: MyString
+  expires: MyString
+  url: MyString
+  login: MyString
+  passwd: MyString
+  notes: MyText
+
+two:
+  product: MyString
+  expires: MyString
+  url: MyString
+  login: MyString
+  passwd: MyString
+  notes: MyText

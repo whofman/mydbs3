@@ -1,0 +1,44 @@
+<h2>Software Overzicht</h2>
+<p>
+<table width="50%">
+  <tr>
+     <td><b>Bestand:</b></td>
+     <td><%=h @softdb.fname %></td>
+  </tr>
+
+  <tr>
+     <td><b>Grootte:</b></td>
+     <td><%=h @softdb.fsize %></td>
+  </tr>
+
+  <tr>
+     <td><b>Datum:</b></td>
+     <td><%=h @softdb.fdate %></td>
+  </tr>
+
+  <tr>
+     <td><b>Volume:</b></td>
+     <td><%=h @softdb.fvol %></td>
+  </tr>
+
+  <tr>
+     <td><b>Hidden:</b></td>
+     <td><%=h @softdb.fhide %></td>
+  </tr>
+
+  <tr>
+     <td><b>Soort:</b></td>
+     <td><%=h @softdb.fcat %></td>
+  </tr>
+
+  <tr>
+     <td><b>Omschrijving:</b></td>
+     <td><%=h @softdb.fdesc %></td>
+  </tr>
+</table>
+
+<p>
+<%= link_to 'Wijzig', edit_softdb_path(@softdb) %> |
+<%= link_to "Verwijder", @softdb, :confirm => 'Zeker weten?', :method => :delete %> |
+<%= link_to "Terug", softdbs_path %>
+</p>

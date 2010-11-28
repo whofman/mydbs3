@@ -1,0 +1,40 @@
+<%= form_for @softdb, :html => {:name => 'Software'} do |f| %> 
+  <% if @softdb.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@softdb.errors.count, "error") %> prohibited this account from being saved:</h2>
+
+      <ul>
+      <% @softdb.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<table width="80%">
+  <tr>
+     <td><%= f.label 'Bestand:' %><br />
+         <%= f.text_field :fname %></td>
+     <td><%= f.label 'Grootte:' %><br />
+         <%= f.text_field :fsize %></td>
+     <td><%= f.label 'Datum:' %><br />
+         <%= f.text_field :fdate %></td>
+  </tr>
+  <tr>
+     <td><%= f.label 'Volume:' %><br />
+         <%= f.text_field :fvol %></td>
+     <td><%= f.label 'Hidden:' %><br />
+         <%= f.text_field :fhide %></td>
+     <td><%= f.label 'Soort:' %><br />
+         <%= f.select :fcat, ["INFO","SYSUTL","COMM","TXTUTL","MISC","BACKUP","WWW", "DRIVER","PATCH","VTOC"], :include_blank => true %></td>
+     </tr>
+  <tr>
+    <td><%= f.label 'Omschrijving:' %><br />
+        <%= f.text_field :fdesc %></td>
+  </tr>
+</table>
+<p>
+    <%= f.submit 'Aanmaken' %>
+</p>
+<% end %>
